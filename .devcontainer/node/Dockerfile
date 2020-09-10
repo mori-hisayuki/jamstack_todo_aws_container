@@ -15,11 +15,11 @@ RUN echo "$USER_NAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers.d/${USER_NAME} \
 
 COPY --chown=${GROUP_NAME}:${USER_NAME} ./ssh /home/${USER_NAME}/.ssh
 
-RUN mkdir /home/$USER_NAME/develop \
-    && chown -R ${GROUP_NAME}:${USER_NAME} /home/$USER_NAME/develop
+RUN mkdir /home/$USER_NAME/jamstack-todo-aws
+    && chown -R ${GROUP_NAME}:${USER_NAME} /home/$USER_NAME/jamstack-todo-aws
 
 USER vscode
-WORKDIR /home/$USER_NAME/develop
-RUN git clone -b master git@github.com:mori-hisayuki/jamstack-todo-aws.git /home/$USER_NAME/develop \
-    && cd /home/${USER_NAME}/develop \
+WORKDIR /home/$USER_NAME/jamstack-todo-aws
+sUN git clone -b master git@github.com:mori-hisayuki/jamstack-todo-aws.git /home/$USER_NAME/jamstack-todo-aws \
+    && cd /home/${USER_NAME}/jamstack-todo-aws \
     && yarn install
