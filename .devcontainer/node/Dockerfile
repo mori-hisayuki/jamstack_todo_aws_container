@@ -20,6 +20,6 @@ RUN mkdir /home/$USER_NAME/develop \
 
 USER vscode
 WORKDIR /home/$USER_NAME/develop
-RUN git clone -b develop git@github.com:mori-hisayuki/jamstack-todo-aws.git /home/$USER_NAME/develop \
+RUN git clone -b master git@github.com:mori-hisayuki/jamstack-todo-aws.git /home/$USER_NAME/develop \
     && cd /home/${USER_NAME}/develop \
     && yarn install
