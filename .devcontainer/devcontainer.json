@@ -38,7 +38,7 @@
 		"humao.rest-client",
 		"tabnine.tabnine-vscode",
 		"fabiospampinato.vscode-todo-plus",
-		//"amazonwebservices.aws-toolkit-vscode",
+		"amazonwebservices.aws-toolkit-vscode",
 		"yokawasa.jwt-debugger",
 		"patricklee.vsnotes",
 		"github.vscode-pull-request-github",
